@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #000000, #000000, #000000, #000000, #000000);
+}
+
+h1 {
+    margin-top: 2%;
+    color: rgb(51, 50, 50)
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.829);
+    height: 12%;
+    box-shadow: 0 0 20px white;
+}
+
+.logo {
+    margin-top: 0.5%;
+    margin-left: 10%;
+    width: 40%;
+    float: left;
+}
+
+.logo img {
+    margin-right: 2%;
+    width: 10%;
+    float: left;
+}
+
+nav {
+    margin-left: 10%;
+    margin-top: 0.5%;
+    width: 40%;
+    float: left;
+}
+
+nav ul {
+    margin-top: 1%;
+}
+
+nav ul li {
+    cursor: pointer;
+    list-style: none;
+    float: left;
+    margin: 2%;
+}
+
+.line {
+    width: 0;
+    height: 1px;
+    transition: all 0.5s ease-in;
+}
+
+nav ul li:hover .line {
+    width: 100%;
+    background-color: blue;
+}
+
+nav ul li a {
+    color: rgb(51, 50, 50);
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    padding-bottom: 1px;
+    color: blue;
+}
+
+.Home {
+    padding-top: 15%;
+    width: 100%;
+    height: 90vh;
+}
+
+.about {
+    opacity: 0;
+    width: 100%;
+    height: 50vh;
+    transition: 1s ease all;
+}
+
+.about img {
+    float: left;
+    border-radius: 50%;
+    width: 60%;
+}
+
+.about .about-content1 {
+    margin-left: 10%;
+    float: left;
+    width: 40%;
+}
+
+.about .about-content2 {
+    float: left;
+    width: 40%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    color: #c5c3c3;
+    text-shadow: 1px 1px 3px #c5c3c3;
+}
+
+table td {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+table h2 {
+    font-size: 40px;
+}
+
+#about {
+    position: absolute;
+    bottom: 0%;
+}
+
+.Home .music {
+    float: left;
+    position: relative;
+    margin-left: 10%;
+    width: 30%;
+}
+
+.music img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    animation: spin 20s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.choice {
+    float: left;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0px 0px 20px gray;
+    border: solid;
+    border-radius: 2%;
+    background-color: rgba(128, 128, 128, 0.737);
+}
+
+.music-choice {
+    margin-bottom: 1%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: groove gray;
+    width: 90%;
+    height: 30%;
+    margin-left: 5%;
+}
+
+.music-img h2 {
+    color: rgb(192, 192, 192);
+    margin-left: 2%;
+    margin-top: 2%;
+    font-size: 30px;
+}
+
+.music-pic {
+    width: 30%;
+    float: left;
+}
+
+.music-choice:first-child {
+    margin-top: .5%;
+}
+
+.music-pic img {
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 120px;
+    height: 80px;
+}
+
+.title {
+    margin-top: 2%;
+    width: 50%;
+    float: left;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.music-choice:hover {
+    box-shadow: 0px 0px 20px white;
+}
+
+audio {
+    margin-top: 5%;
+}
+
+.skill {
+    transition: 1s ease all;
+    opacity: 0;
+    height: 50vh;
+}
+
+.bar {
+    width: 50%;
+    margin-left: 10%;
+}
+
+label {
+    float: left;
+    display: block;
+    width: 40%;
+    margin-right: 5%;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.744);
+}
+
+progress {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    height: 20px;
+    width: 55%;
+}
+
+.left {
+    float: left;
+    margin-left: 10%;
+    width: 40%;
+}
+
+.right {
+    float: left;
+    width: 40%;
+}
+
+#skill1 {
+    margin-top: 5%;
+    /* margin-bottom: 10%; */
+}
+
+progress {
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.663);
+}
+
+progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: rgba(255, 192, 203, 0.451);
+}
+
+progress::-moz-progress-bar {
+    background-color: pink;
+}
+
+.footer {
+    color: rgba(255, 255, 255, 0.621);
+    text-align: center;
+    position: unset;
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.footer p {
+    font-style: italic;
+    margin-top: 1%;
+    margin-bottom: 10px;
+}
+
+.footer p:first-child {
+    margin-top: 1.5%;
+    margin-bottom: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.mininav {
+    display: none;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    html,
+    body {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+    .logo {
+        margin-top: 2%;
+    }
+
+    .logo img {
+        width: 30%;
+    }
+
+    .mininav {
+        z-index: -1;
+        position: relative;
+        border: solid;
+        margin-right: 10%;
+        margin-top: 3%;
+        width: 10%;
+        height: 40%;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mininav .mini {
+        border-radius: 5px;
+        margin-left: 10%;
+        width: 80%;
+        background-color: black;
+        height: 15%;
+        transition: all ease 0.5s;
+    }
+
+    .visually-hidden {
+        display: inline;
+        right: 13.5%;
+        bottom: 40%;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #toggle:checked+.mininav>.mini:nth-child(1) {
+        position: absolute;
+        transform: rotate(45deg);
+    }
+
+    #toggle:checked+.mininav>.mini:nth-child(2) {
+        opacity: 0;
+    }
+
+    #toggle:checked+.mininav>.mini:nth-child(3) {
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+
+    nav {
+        border: groove black;
+        border-radius: 10px;
+        right: 10%;
+        top: 75%;
+        position: absolute;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 0 20px white;
+        width: 0%;
+        height: 0;
+        transition-property: all;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #toggle:checked~nav {
+        width: 25%;
+        opacity: 1;
+        height: fit-content;
+    }
+
+    nav ul li a:hover {
+        color: black;
+    }
+
+    nav ul li:hover .line {
+        background-color: black;
+    }
+
+    #myNav a {
+        font-size: 1.5rem;
+    }
+
+    #myNav .closebtn {
+        font-size: 3em;
+    }
+
+    #home {
+        position: absolute;
+        top: 0%;
+    }
+
+    .Home {
+        margin-top: 20%;
+    }
+
+    .Home .music {
+        margin: 0;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    .music-img h2 {
+        font-size: 1.6rem;
+    }
+
+    #play {
+        width: 100%;
+        margin: auto;
+    }
+
+    #content1 {
+        width: 100%;
+        display: flex;
+    }
+
+    .music img {
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 5%;
+    }
+
+    .choice {
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .music-choice .title {
+        float: right;
+    }
+
+    header {
+        top: 0;
+    }
+
+    .about .about-content1 {
+        display: flex;
+        margin-top: 10%;
+        width: 80%;
+    }
+
+    .about .about-content1 img {
+        margin: auto;
+    }
+
+    .about .about-content2 {
+        display: flex;
+        width: 100%;
+    }
+
+    .about .about-content2 table {
+        width: 20%;
+        margin: auto;
+    }
+
+    .about .about-content2 table h2 {
+        position: relative;
+        left: -30%;
+        font-size: 2rem;
+    }
+
+    #skill1 {
+        margin-top: 90%;
+        margin-bottom: 50%;
+    }
+
+    .left {
+        margin-top: 10%;
+        margin: auto;
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    .right {
+        margin: auto;
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    #skill {
+        background-color: red;
+        position: relative;
+        bottom: -30%;
+    }
+
+    .footer {
+        overflow: hidden;
+    }
+
+    #about {
+        position: relative;
+        bottom: -10%;
+    }
+
+    progress {
+        height: 20px;
+        width: 100%;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    .music-pic img {
+        margin-top: 2%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    html,
+    body {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+    .music-pic img {
+        width: 100px;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 600px) {
+
+    .logo {
+        margin-top: 1%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 850px) {
+
+    html,
+    body {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+    .Home .music {
+
+        width: 56% !important;
+        margin: auto;
+        margin-left: 10vw !important;
+    }
+}
+
+@media only screen and (min-width: 601px)  and (max-width: 850px)  {
+
+    html,
+    body {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .Home .music {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 5%;
+    }
+
+    .choice {
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 90%;
+        margin-bottom: 5%;
+    }
+
+    .choice img {
+        margin-top: 2%;
+    }
+
+    .about .about-content1 {
+        margin-top: 2%;
+        margin-left: 2%;
+        display: flex;
+    }
+
+    .about .about-content1 img {
+        margin: auto;
+    }
+
+    #skill1 {
+        height: 30vh;
+        margin-top: 40%;
+        margin-bottom: 10%;
+    }
+
+    .bar {
+        width: 100%;
+    }
+
+    .left {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .left label {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    .right label {
+        font-size: 1.5rem;
+    }
+
+    #about {
+        position: relative;
+        top: 20%;
+    }
+}
+
+@media only screen and (min-width: 850px)  and (max-width: 1410px) {
+    .logo img {
+        width: 60px;
+    }
+
+    html,
+    body {
+        max-width: 100% !important;
+        overflow-x: clip !important;
+    }
+
+    .about {
+        margin-bottom: 0;
+    }
+
+    #skill1 {
+        height: 30vh;
+        margin-bottom: 10%;
+    }
+
+    .bar {
+        width: 100%;
+    }
+
+    .left {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .left label {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+
+    .right label {
+        font-size: 1.5rem;
+    }
+
+    #about1 {
+        margin-bottom: 0;
+    }
+
+    #about {
+        position: relative;
+        top: -25%;
+    }
+
+    .music-img {
+        width: 120%;
+    }
+
+    .choice {
+        margin-top: 5%;
+        float: right;
+        margin-right: 2%;
+    }
+
+    .choice .title {
+        margin-right: 10%;
+        float: right;
+    }
+}

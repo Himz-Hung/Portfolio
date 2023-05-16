@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="logo1.png" rel="icon">
+    <link href="portfolio.css" rel="Stylesheet">
+</head>
+<body style="height: 100vh;" onmousemove="show1()">
+    <div style="position: absolute; z-index: -1; background-color: black;" onmousemove="show1()">
+    </div>
+    <header onmousemove="show1()">
+        <div class="logo">
+            <img src="logo2.png">
+            <h1>Himz</h1>
+        </div>
+        <input type="checkbox" id="toggle" class="visually-hidden"/>
+        <div class="mininav">
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+        </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a> <div class="line"></div></li>
+                <li><a href="#about">About</a> <div class="line"></div></li>
+                <li><a href="#skill">Skills</a> <div class="line"></div></li>
+                <li><a onclick="openNav()">Contact</a> <div class="line"></div>
+                    <div id="myNav" class="overlay">
+                        <a class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                          <a target="_blank" href="https://www.facebook.com/profile.php?id=100008337255913">Facebook</a>
+                          <a target="_blank" href="https://www.instagram.com/hunggl2003/">Instagram</a>
+                          <a href="mailto:hungITforWork@gmail.com">Email: hungITforWork@gmail.com</a>
+                          <a>Phone: 0859550557</a>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="home" onmousemove="show1()"></div>
+    <div class="Home box" onmousemove="show1()">
+        <div class="music" onmousemove="show1()" id="music-content1">
+            <div class="music-img">
+                <div id="content1">
+                <img src="music2.jpg" alt="music" id="pic">
+            </div>
+                <audio controls src="DenVau.mp3" id="play" type="audio/mp3" >
+                    audio
+                </audio>
+                <h2 id="title">Title: Mang tiền về cho mẹ</h2>
+                <h2 id="singer">Singer: Đen Vâu</h2>
+            </div>
+        </div>
+        <div class="choice" onmousemove="show1()">
+            <div class="music-choice" onclick="music(1)">
+                <div class="music-pic">
+                    <img src="music2.jpg" >
+                </div>
+                <div class="title">
+                    <p>Song: Mang tiền về cho mẹ</p>
+                <p>Singer: Đen vâu</p>
+                </div>
+            </div>
+            <div class="music-choice" onclick="music(2)">
+                <div class="music-pic">
+                    <img src="maxresdefault.jpg">
+                </div>
+                <div class="title">
+                    <p>Song: Thunder</p>
+                <p>Singer: Imagine Dragons</p>
+                </div>
+            </div>
+            <div class="music-choice" onclick="music(3)">
+                <div class="music-pic">
+                    <img src="music1.jpg">
+                </div>
+                <div class="title">
+                    <p>Song: Waiting for you</p>
+                <p>Singer: Mono</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div id="about" onmousemove="show1()"></div>
+    <div class="about box" id = "about1" onmousemove="show1()">
+             <div class="about-content1">
+                <img src="about.jpg" alt="mypic">
+             </div>
+             <div class="about-content2">
+                <table>
+                    <th>
+                        <td>
+                            <h2>Information.</h2>
+                        </td>
+                    </th>
+                    <tr>
+                        <td>Name:</td>
+                        <td>Dang Ngoc Hung.</td>
+                    </tr>
+                    <tr>
+                        <td>Birth:</td>
+                        <td>14/11/2003.</td>
+                    </tr>
+                    <tr>
+                        <td>University:</td>
+                        <td>FPT University.</td>
+                    </tr>
+                    <tr>
+                        <td>Hobby:</td>
+                        <td>Video Games, Learning new things.</td>
+                    </tr>
+                    <tr>
+                        <td>For more:</td>
+                        <td>Please Contact.</td>
+                    </tr>
+                </table>
+             </div>
+    </div>
+    <div id="skill" onmousemove="show1()"></div>
+    <div class="skill box" id="skill1" onmousemove="show1()">
+        <div class="left">
+        <div class="bar">
+            <label for="java">Java:</label>
+            <progress id="java" value="60" max="100"> 60% </progress>
+        </div>
+        <div class="bar">
+            <label for="html">HTML:</label>
+            <progress id="html" value="70" max="100"> 70% </progress>
+        </div>
+        <div class="bar">
+            <label for="oop">OOP:</label>
+            <progress id="oop" value="80" max="100"> 80% </progress>
+        </div>
+        <div class="bar">
+            <label for="dsa">DSA:</label>
+            <progress id="dsa" value="60" max="100"> 60% </progress>
+        </div>
+        </div>
+        <div class="right">
+        <div class="bar">
+            <label for="css">CSS:</label>
+            <progress id="css" value="75" max="100"> 75% </progress>
+        </div>
+        <div class="bar">
+            <label for="js">Javascript:</label>
+            <progress id="js" value="65" max="100"> 65% </progress>
+        </div>
+        <div class="bar">
+            <label for="db">Database:</label>
+            <progress id="db" value="50" max="100"> 50% </progress>
+        </div>
+    </div>
+    </div>
+    <footer class="footer" style="box-shadow: 0 0 20px white; background-color:rgba(255, 255, 255, 0.829);color: rgb(51, 50, 50);">
+        <div>
+            <p style="padding-top: 1%;">Email: hungITforWork@gmail.com</p>
+            <p>Phone: 0859550557</p>
+        </div>
+    </footer>
+    <script src="portfolio.js"></script>
+</body>
+</html>
